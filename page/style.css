@@ -49,8 +49,21 @@ img {
 
 /* header */
 
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 10;
+  transition: background-color .3s ease-in-out;
+}
+
+.header--scrolled {
+  background-color: #000000;
+}
+
 .header__wrapper {
-  padding: 20px 0;
+  padding: 20px 0 20px 185px;
   display: flex;
   align-items: center;
 }
@@ -68,12 +81,12 @@ img {
   text-transform: uppercase;
   color: #ffffff;
   word-break: break-all;
-  transition: opacity .3s ease-in-out, color .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .header__logo:hover {
   opacity: 0.7;
-  color: #EFCFAD;
+  color: #efcfad;
 }
 
 .header__list {
@@ -90,10 +103,113 @@ img {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #ffffff;
-  transition: opacity .3s ease-in-out, color .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .header__link:hover {
   opacity: 0.7;
-  color: #EFCFAD;
+  color: #efcfad;
 }
+
+/* hero */
+.main {
+  position: relative;
+}
+
+.hero__wrapper {
+  padding-left: 180px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  background-image: url("./assets/image/hero-img.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero__content {
+  padding-top: 350px;
+  padding-bottom: 50px;
+  width: 75%;
+}
+
+.hero__title {
+  margin: 0;
+  margin-bottom: 50px;
+  max-width: 1305px;
+  font-family: "Prata";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.hero__subtitle {
+  display: block;
+  margin-bottom: 64px;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.hero__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  margin-bottom: 40px;
+}
+
+.hero__item {
+  display: flex;
+  align-items: center;
+  column-gap: 17px;
+}
+
+.hero__item-txt {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  margin: 0;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  color: #ffffff;
+}
+
+.hero__item-txt em {
+  font-family: "Prata";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero__btn {
+  padding: 32px 50px;
+  background: #ffffff;
+  border-radius: 4px;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #222222;
+  transition: opacity .3s ease-in-out;
+  cursor: pointer;
+}
+
+.hero__btn:hover {
+  opacity: 0.7;
+}
+
